@@ -49,6 +49,7 @@ $describe("Recordset") {
     data->tester->initializeRuntime();
 
     sql::DriverManager *manager = sql::DriverManager::getDriverManager();
+    manager->set_testing();
     sql::Authentication::Ref auth;
 
     data->connection = sql::Dbc_connection_handler::Ref(new sql::Dbc_connection_handler());

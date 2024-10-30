@@ -483,6 +483,7 @@ db_mysql_CatalogRef WorkbenchTester::reverseEngineerSchemas(const std::list<std:
   setupConnectionEnvironment(properties, getRdbms()->drivers()[0]);
 
   sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+  dm->set_testing();
   auto connection = dm->getConnection(properties);
 
   wb->new_document();

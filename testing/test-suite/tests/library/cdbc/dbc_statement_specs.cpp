@@ -67,10 +67,12 @@ $TestData {
   db_mgmt_ConnectionRef connectionProperties;
 
   sql::ConnectionWrapper connection() {
+    dm->set_testing();
     return dm->getConnection(connectionProperties);
   }
 
   void removeTestTable() {
+    dm->set_testing();
     auto connection = dm->getConnection(connectionProperties);
     std::unique_ptr<sql::Statement> stmt2(connection->createStatement());
     stmt2->execute(DATABASE_TO_USE);
@@ -249,6 +251,7 @@ $describe("DBC: statement tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBeNull("dm is NULL");
 
       sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);
@@ -279,6 +282,7 @@ $describe("DBC: statement tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBeNull("dm is NULL");
 
       sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);
@@ -310,6 +314,7 @@ $describe("DBC: statement tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBeNull("dm is NULL");
 
       sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);
@@ -340,6 +345,7 @@ $describe("DBC: statement tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBeNull("dm is NULL");
 
       sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);

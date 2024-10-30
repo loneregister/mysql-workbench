@@ -144,7 +144,7 @@ namespace sql {
     return dm;
   }
 
-  DriverManager::DriverManager() : _driver_path("."), _cacheTime(0) {
+  DriverManager::DriverManager() : _driver_path("."), _cacheTime(0), _testing(false) {
   }
 
   void DriverManager::setTunnelFactoryFunction(TunnelFactoryFunction function) {
@@ -201,6 +201,10 @@ namespace sql {
   void DriverManager::thread_cleanup() {
     for (auto &it : _drivers)
       it.second();
+  }
+
+  void DriverManager::set_testing() {
+    _testing = true;
   }
 
   //--------------------------------------------------------------------------------------------------
@@ -325,7 +329,9 @@ namespace sql {
       auto nativePasswordDir = base::dirname(mforms::App::get()->get_executable_path("mysql_native_password.so"));
       properties["pluginDir"] = nativePasswordDir + "/../Frameworks";
 #else
-      properties["pluginDir"] = base::dirname(mforms::App::get()->get_executable_path("mysql_native_password.so"));
+      if (!_testing) {
+        properties["pluginDir"] = base::dirname(mforms::App::get()->get_executable_path("mysql_native_password.so"));
+      }
 #endif
       properties["OPT_AUTHENTICATION_KERBEROS_CLIENT_MODE"] = "";
       std::string krb5 = parameter_values.get_string("krb5");

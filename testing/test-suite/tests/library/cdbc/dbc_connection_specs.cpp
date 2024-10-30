@@ -60,12 +60,14 @@ $describe("DBC: connection tests") {
 
   $it("Test initialization of a connection and it's destruction", [&]() {
     sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+    dm->set_testing();
     $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
   });
 
   $it("Test initialization of a statement and it's destruction.", [&]() {
     sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+    dm->set_testing();
     $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
     sql::ConnectionWrapper wrapper = dm->getConnection(data->connectionProperties);
@@ -79,6 +81,7 @@ $describe("DBC: connection tests") {
 
   $it("Test construction of a metadata object.", [&]() {
     sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+    dm->set_testing();
     $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
     sql::ConnectionWrapper wrapper = dm->getConnection(data->connectionProperties);
@@ -92,6 +95,7 @@ $describe("DBC: connection tests") {
 
   $it("Test autocommit.", [&]() {
     sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+    dm->set_testing();
     $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
 
@@ -138,6 +142,7 @@ $describe("DBC: connection tests") {
     // setupConnectionEnvironment(connectionProperties);
 
     sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+    dm->set_testing();
     $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
     sql::ConnectionWrapper wrapper = dm->getConnection(data->connectionProperties);
@@ -155,6 +160,7 @@ $describe("DBC: connection tests") {
   $it("Test 2 connections.", [&]() {
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper1 = dm->getConnection(data->connectionProperties);
@@ -193,6 +199,7 @@ $describe("DBC: connection tests") {
   $it("Test kill ourselves 1.", [&]() {
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper1 = dm->getConnection(data->connectionProperties);
@@ -226,6 +233,7 @@ $describe("DBC: connection tests") {
   $it("Test kill ourselves 2 - kill and query thereafter.", [&]() {
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper1 = dm->getConnection(data->connectionProperties);

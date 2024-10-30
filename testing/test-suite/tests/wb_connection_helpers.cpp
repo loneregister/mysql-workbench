@@ -58,6 +58,7 @@ sql::ConnectionWrapper createConnectionForImport() {
   setupConnectionEnvironment(properties);
 
   sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+  dm->set_testing();
   return dm->getConnection(properties);
 }
 

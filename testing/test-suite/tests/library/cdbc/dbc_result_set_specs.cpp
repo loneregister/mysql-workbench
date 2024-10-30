@@ -82,6 +82,7 @@ $describe("DBC: PS tests") {
     db_mgmt_ConnectionRef connectionProperties(grt::Initialized);
     setupConnectionEnvironment(connectionProperties);
     sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+    dm->set_testing();
 
     sql::ConnectionWrapper wrapper1 = dm->getConnection(connectionProperties);
     sql::Connection *connection = wrapper1.get();
@@ -96,6 +97,7 @@ $describe("DBC: PS tests") {
 
     setupConnectionEnvironment(connectionProperties);
     sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+    dm->set_testing();
     $expect(dm).Not.toBeNull("dm is NULL");
 
     sql::ConnectionWrapper wrapper1 = dm->getConnection(connectionProperties);
@@ -117,6 +119,7 @@ $describe("DBC: PS tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper1 = dm->getConnection(connectionProperties);
@@ -156,6 +159,7 @@ $describe("DBC: PS tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper1 = dm->getConnection(connectionProperties);
@@ -187,6 +191,7 @@ $describe("DBC: PS tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper1 = dm->getConnection(connectionProperties);
@@ -220,6 +225,7 @@ $describe("DBC: PS tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper1 = dm->getConnection(connectionProperties);
@@ -289,6 +295,7 @@ $describe("DBC: PS tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper1 = dm->getConnection(connectionProperties);
@@ -358,6 +365,7 @@ $describe("DBC: PS tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper1 = dm->getConnection(connectionProperties);
@@ -387,6 +395,7 @@ $describe("DBC: PS tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper1 = dm->getConnection(connectionProperties);

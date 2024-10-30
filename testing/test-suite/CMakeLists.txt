@@ -3,7 +3,6 @@ cmake_minimum_required(VERSION 3.8)
 
 project(WORKBENCH_UNIT_TESTS)
 
-
 set(workbench_dir "${CMAKE_SOURCE_DIR}/../..") # This must come from the parent
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${workbench_dir}/build/cmake/Modules/")
 
@@ -224,9 +223,9 @@ target_include_directories(wbtests-bin
 )
 
 target_compile_definitions(wbtests-bin
-	PRIVATE
-		ENABLE_TESTING
-		RAPIDJSON_HAS_STDSTRING
+  PRIVATE
+    RAPIDJSON_HAS_STDSTRING
+    ENABLE_TESTING
 	)
 
 target_link_libraries(wbtests-bin

@@ -61,6 +61,7 @@ $describe("DBC: metadata tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);
@@ -90,6 +91,7 @@ $describe("DBC: metadata tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);
@@ -112,6 +114,7 @@ $describe("DBC: metadata tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);
@@ -135,6 +138,7 @@ $describe("DBC: metadata tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);
@@ -158,6 +162,7 @@ $describe("DBC: metadata tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);
@@ -181,6 +186,7 @@ $describe("DBC: metadata tests") {
 
     try {
       sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+      dm->set_testing();
       $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
       sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);

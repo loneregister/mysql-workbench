@@ -56,6 +56,7 @@ $describe("DBC: general tests") {
     setupConnectionEnvironment(connectionProperties);
 
     sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+    dm->set_testing();
     sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);
     sql::Connection *connection = wrapper.get();
 
@@ -72,6 +73,7 @@ $describe("DBC: general tests") {
     setupConnectionEnvironment(connectionProperties);
 
     sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+    dm->set_testing();
     sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);
     sql::Connection *connection = wrapper.get();
 
@@ -93,6 +95,7 @@ $describe("DBC: general tests") {
     setupConnectionEnvironment(connectionProperties);
 
     sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+    dm->set_testing();
     sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);
     sql::Connection *connection = wrapper.get();
     sql::DatabaseMetaData *meta(connection->getMetaData());
@@ -119,6 +122,7 @@ $describe("DBC: general tests") {
     setupConnectionEnvironment(connectionProperties);
 
     sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+    dm->set_testing();
     sql::ConnectionWrapper wrapper = dm->getConnection(connectionProperties);
     sql::Connection *connection = wrapper.get();
 

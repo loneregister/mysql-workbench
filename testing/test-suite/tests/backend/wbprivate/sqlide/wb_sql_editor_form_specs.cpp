@@ -249,6 +249,7 @@ $describe("SQL Editor Form") {
     connectionProperties->driver(driverProperties);
 
     sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+    dm->set_testing();
 
     data->connection = dm->getConnection(connectionProperties);
 

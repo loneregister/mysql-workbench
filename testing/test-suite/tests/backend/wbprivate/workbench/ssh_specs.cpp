@@ -214,6 +214,7 @@ $xdescribe("SSH testing") {
     uint16_t port = std::get<1>(retVal);
 
     sql::DriverManager *dm = sql::DriverManager::getDriverManager();
+    dm->set_testing();
     $expect(dm).Not.toBe(nullptr, "dm is NULL");
 
     db_mgmt_ConnectionRef connectionProperties = db_mgmt_ConnectionRef(grt::Initialized);

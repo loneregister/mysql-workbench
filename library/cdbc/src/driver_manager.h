@@ -146,6 +146,7 @@ namespace sql {
                                     ConnectionInitSlot connection_init_slot = ConnectionInitSlot());
 
     void thread_cleanup();
+    void set_testing();
 
     std::shared_ptr<wb::SSHTunnel> getTunnel(const db_mgmt_ConnectionRef &connectionProperties);
 
@@ -182,6 +183,7 @@ namespace sql {
     std::string _cacheKey;
     time_t _cacheTime;
     std::string _versionInfo;
+    bool _testing;
   };
 
   class Dbc_connection_handler {
