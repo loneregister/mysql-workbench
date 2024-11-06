@@ -15,8 +15,8 @@ using namespace System::Security::Permissions;
 [assembly:AssemblyConfigurationAttribute(L"")];
 [assembly:AssemblyCompanyAttribute(L"")];
 [assembly:AssemblyProductAttribute(L"aalwr")];
-[assembly:AssemblyCopyrightAttribute(L"Copyright (c) 2017, 2018, Oracle Corporation")];
-[assembly:AssemblyTrademarkAttribute(L"")];
+[assembly:AssemblyCopyrightAttribute(L"Copyright © 2017, 2024, Oracle and/or its affiliates.")];
+[assembly:AssemblyTrademarkAttribute(L"Oracle®, Java, MySQL, and NetSuite are registered trademarks of Oracle and/or its affiliates.")];
 [assembly:AssemblyCultureAttribute(L"")];
 
 //
