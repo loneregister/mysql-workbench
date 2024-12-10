@@ -723,7 +723,7 @@ class CheckForUpdateThread(threading.Thread):
             self.error = "%s\n\nPlease verify that your internet connection is available." % str(error)        
     
     def checkForUpdatesCallback(self):
-        if self.isAlive():
+        if self.is_alive():
             return True  # Don't do anything until the dom is built
         
         if not self.json:
