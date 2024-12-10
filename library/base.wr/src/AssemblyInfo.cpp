@@ -14,8 +14,8 @@ using namespace System::Security::Permissions;
 [assembly:AssemblyConfigurationAttribute("")];
 [assembly:AssemblyCompanyAttribute("Oracle")];
 [assembly:AssemblyProductAttribute("base-wrapper")];
-[assembly:AssemblyCopyrightAttribute("Copyright (c) 2013, 2016, Oracle and/or its affiliates")];
-[assembly:AssemblyTrademarkAttribute("")];
+[assembly:AssemblyCopyrightAttribute("Copyright © 2013, 2024, Oracle and/or its affiliates.")];
+[assembly:AssemblyTrademarkAttribute("Oracle®, Java, MySQL, and NetSuite are registered trademarks of Oracle and/or its affiliates.")];
 [assembly:AssemblyCultureAttribute("")];
 
 //

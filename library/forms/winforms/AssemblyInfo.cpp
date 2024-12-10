@@ -33,8 +33,8 @@ using namespace Runtime::InteropServices;
 [assembly:AssemblyConfigurationAttribute("")];
 [assembly:AssemblyCompanyAttribute("Oracle Corporation")];
 [assembly:AssemblyProductAttribute("mforms.wr")];
-[assembly:AssemblyCopyrightAttribute("Copyright (c) 2010, 2017, Oracle and/or its affiliates")];
-[assembly:AssemblyTrademarkAttribute("")];
+[assembly:AssemblyCopyrightAttribute("Copyright © 2010, 2017, Oracle and/or its affiliates")];
+[assembly:AssemblyTrademarkAttribute("Oracle®, Java, MySQL, and NetSuite are registered trademarks of Oracle and/or its affiliates.")];
 [assembly:AssemblyCultureAttribute("")];
 
 //
