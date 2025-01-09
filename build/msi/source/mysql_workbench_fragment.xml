@@ -101,9 +101,9 @@
                 <File Id="gssapi64" Name="gssapi64.dll" />
                 <File Id="ccapiserver.exe" Name="ccapiserver.exe" />
 		    <?if $(var.LICENSE_TYPE) = "debug"?>
-                <File Id="proj_9.5.0_d.dll" Name="proj_9.5.0_d.dll" />
+                <File Id="proj_9_d.dll" Name="proj_9_d.dll" />
                 <?else?>
-                <File Id="proj_9.5.0.dll" Name="proj_9.5.0.dll" />
+                <File Id="proj_9.dll" Name="proj_9.dll" />
                 <?endif?>
                 </Component>
 
