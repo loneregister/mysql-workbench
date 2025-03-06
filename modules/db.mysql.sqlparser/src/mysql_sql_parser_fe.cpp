@@ -24,6 +24,8 @@
 
 #include <glib.h>
 #include <cctype>
+#include <iostream> 
+#include <algorithm>
 
 #if defined(_MSC_VER)
 #include <windows.h>

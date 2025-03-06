@@ -31,6 +31,11 @@ typedef __int64 ssize_t;
 typedef int ssize_t;
 #endif
 
+#if _MSC_VER >= 1920
+#pragma comment(linker, "/alternatename:__imp___std_init_once_complete=__imp_InitOnceComplete")
+#pragma comment(linker, "/alternatename:__imp___std_init_once_begin_initialize=__imp_InitOnceBeginInitialize")
+#endif
+
 #define NOMINMAX
 #include <winsock2.h>
 #include <Windows.h>
