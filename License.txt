@@ -1,6 +1,6 @@
 Licensing Information User Manual
 
-MySQL Workbench 8.0.41 Community
+MySQL Workbench 8.0.42 Community
      __________________________________________________________________
 
 Introduction
@@ -8,18 +8,18 @@ Introduction
    This License Information User Manual contains Oracle's product license
    and other licensing information, including licensing information for
    third-party software which may be included in this distribution of
-   MySQL Workbench 8.0.41 Community.
+   MySQL Workbench 8.0.42 Community.
 
-   Last updated: November 2024
+   Last updated: March 2025
 
 Licensing Information
 
-   This release of MySQL Workbench 8.0.41 Community is brought to you by
+   This release of MySQL Workbench 8.0.42 Community is brought to you by
    the MySQL team at Oracle. This software is released under version 2 of
    the GNU General Public License (GPLv2), as set forth below, with the
    following additional permissions:
 
-   This distribution of MySQL Workbench 8.0.41 Community is designed to
+   This distribution of MySQL Workbench 8.0.42 Community is designed to
    work with certain software (including but not limited to OpenSSL) that
    is licensed under separate terms, as designated in a particular file or
    component or in the license documentation. Without limiting your rights
@@ -28,7 +28,7 @@ Licensing Information
    separately licensed software that they have either included with the
    program or referenced in the documentation.
 
-   Copyright (c) 2006, 2024, Oracle and/or its affiliates.
+   Copyright (c) 2006, 2025, Oracle and/or its affiliates.
 
 Election of GPLv2
 
@@ -695,19 +695,29 @@ This component is licensed under the GNU GPL license, version 2.0.
 
 GDAL/OGR
 
+You may be receiving a copy of the Geospatial Data Abstraction
+Library/OpenGIS Simple Features Reference Implementation (GDAL/OGR)
+library as part of this product.
+The terms of the Oracle license do NOT apply to GDAL/OGR.
+GDAL/OGR inclue files licensed under the Apache 2.0 license, separate
+from the Oracle product.
+If you do not wish to install this library, you may remove it, but
+the Oracle program might not operate properly or at all without it.
+
 GDAL/OGR Licensing
 ==================
 
 This file attempts to include all licenses that apply within the GDAL/OGR
-source tree, in particular any that are supposed to be exposed to the end
-user for credit requirements for instance.  The contents of this file can be
+source tree, in particular any that are supposed to be exposed to the end user
+for credit requirements for instance.  The contents of this file can be
 displayed from GDAL commandline utilities using the --license commandline
 switch.
+
 
 GDAL/OGR General
 ----------------
 
-In general GDAL/OGR is licensed under an MIT/X style license with the
+In general GDAL/OGR is licensed under an MIT style license with the
 following terms:
 
 Permission is hereby granted, free of charge, to any person obtaining a
@@ -728,11 +738,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 
-gdal/frmts/gtiff/tif_float.c
-----------------------------
+
+port/cpl_float.cpp
+------------------
 
 Copyright (c) 2002, Industrial Light & Magic, a division of Lucas
 Digital Ltd. LLC
+
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -760,8 +772,9 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-gdal/frmts/hdf4/hdf-eos/*
-------------------------
+
+frmts/hdf4/hdf-eos/*
+--------------------
 
  Copyright (C) 1996 Hughes and Applied Research Corporation
 
@@ -770,8 +783,9 @@ gdal/frmts/hdf4/hdf-eos/*
  copyright notice appear in all copies and that both that copyright notice and
  this permission notice appear in supporting documentation.
 
-gdal/frmts/pcraster/libcsf
---------------------------
+
+frmts/pcraster/libcsf
+---------------------
 
 Copyright (c) 1997-2003, Utrecht University
 All rights reserved.
@@ -804,14 +818,15 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-gdal/frmts/grib/degrib/*
-------------------------
+frmts/grib/degrib/*
+-------------------
 
 The degrib and g2clib source code are modified versions of code produced
 by NOAA NWS and are in the public domain subject to the following
 restrictions:
 
 http://www.weather.gov/im/softa.htm
+
 DISCLAIMER The United States Government makes no warranty, expressed or
 implied, as to the usefulness of the software and documentation for any
 purpose. The U.S. Government, its instrumentalities, officers, employees,
@@ -819,7 +834,8 @@ and agents assumes no responsibility (1) for the use of the software and
 documentation listed below, or (2) to provide technical support to users.
 
 http://www.weather.gov/disclaimer.php
-The information on government servers are in the public domain, unless
+
+ The information on government servers are in the public domain, unless
 specifically annotated otherwise, and may be used freely by the public so
 long as you do not 1) claim it is your own (e.g. by claiming copyright for
 NWS information -- see below), 2) use it in a manner that implies an
@@ -846,7 +862,10 @@ port/cpl_minizip*
 
 This is version 2005-Feb-10 of the Info-ZIP copyright and license.
 The definitive version of this document should be available at
-ftp://ftp.info-zip.org/pub/infozip/license.html indefinitely.
+ftp://ftp.info-zip.org/pub/infozip/license.html
+indefinitely.
+
+
 Copyright (c) 1990-2005 Info-ZIP.  All rights reserved.
 
 For the purposes of this copyright and license, "Info-ZIP" is defined as
@@ -898,14 +917,16 @@ freely, subject to the following restrictions:
        "UnZipSFX," "WiZ," "Pocket UnZip," "Pocket Zip," and "MacZip" for its
        own source and binary releases.
 
-gdal/ogr/ogrsf_frmts/dxf/intronurbs.cpp
----------------------------------------
+
+ogr/ogrsf_frmts/dxf/intronurbs.cpp
+----------------------------------
 
 This code is derived from the code associated with the book "An Introduction
 to NURBS" by David F. Rogers.  More information on the book and the code is
 available at:
 
   http://www.nar-associates.com/nurbs/
+
 
 Copyright (c) 2009, David F. Rogers
 All rights reserved.
@@ -933,6 +954,149 @@ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
 CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
+
+alg/thinplatespline.cpp
+-----------------------
+
+IEEE754 log() code derived from:
+@(#)e_log.c 1.3 95/01/18
+
+Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
+
+Developed at SunSoft, a Sun Microsystems, Inc. business.
+Permission to use, copy, modify, and distribute this
+software is freely granted, provided that this notice
+is preserved.
+
+
+alg/libqhull
+------------
+
+Only applies when GDAL is compiled with internal qhull support
+
+
+                    Qhull, Copyright (c) 1993-2012
+
+                            C.B. Barber
+                           Arlington, MA
+
+                               and
+
+       The National Science and Technology Research Center for
+        Computation and Visualization of Geometric Structures
+                        (The Geometry Center)
+                       University of Minnesota
+
+                       email: qhull@qhull.org
+
+This software includes Qhull from C.B. Barber and The Geometry Center.
+Qhull is copyrighted as noted above.  Qhull is free software and may
+be obtained via http from www.qhull.org.  It may be freely copied, modified,
+and redistributed under the following conditions:
+
+1. All copyright notices must remain intact in all files.
+
+2. A copy of this text file must be distributed along with any copies
+   of Qhull that you redistribute; this includes copies that you have
+   modified, or copies of programs or other software products that
+   include Qhull.
+
+3. If you modify Qhull, you must include a notice giving the
+   name of the person performing the modification, the date of
+   modification, and the reason for such modification.
+
+4. When distributing modified versions of Qhull, or other software
+   products that include Qhull, you must provide notice that the original
+   source code may be obtained as noted above.
+
+5. There is no warranty or other guarantee of fitness for Qhull, it is
+   provided solely "as is".  Bug reports or fixes may be sent to
+   qhull_bug@qhull.org; the authors may or may not act on them as
+   they desire.
+
+frmts/pdf/pdfdataset.cpp (method PDFiumRenderPageBitmap())
+----------------------------------------------------------
+
+Copyright 2014 PDFium Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+cmake/modules/3.* (backported CMake find modules)
+-------------------------------------------------
+
+CMake - Cross Platform Makefile Generator
+Copyright 2000-2022 Kitware, Inc. and Contributors
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+* Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+
+* Neither the name of Kitware, Inc. nor the names of Contributors
+  may be used to endorse or promote products derived from this
+  software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ogr/ogr_recordbatch.h
+---------------------
+// Licensed to the Apache Software Foundation (ASF) under one
+// or more contributor license agreements.  See the NOTICE file
+// distributed with this work for additional information
+// regarding copyright ownership.  The ASF licenses this file
+// to you under the Apache License, Version 2.0 (the
+// "License"); you may not use this file except in compliance
+// with the License.  You may obtain a copy of the License at
+//
+//   http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing,
+// software distributed under the License is distributed on an
+// "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.  See the License for the
+// specific language governing permissions and limitations
+// under the License.
 
    ======================================================================
    ======================================================================
