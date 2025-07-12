@@ -294,6 +294,26 @@ class WbAdminConnections(WbAdminTabBase):
     @classmethod
     def identifier(cls):
         return "admin_connections"
+    
+    def _detect_os_for_db_column(self):
+        """Detect OS using /etc/os-release and return appropriate DB column name"""
+        try:
+            with open('/etc/os-release', 'r') as f:
+                os_release_content = f.read()
+                # Look for exact ID matches first
+                for line in os_release_content.split('\n'):
+                    if line.startswith('ID='):
+                        os_id = line.split('=', 1)[1].strip('"').lower()
+                        if os_id == 'ubuntu' or os_id == 'fedora':
+                            return 'db'
+        except (OSError, IOError):
+            # If we can't read /etc/os-release, fall back to default
+            pass
+        return 'DB'
+    
+    def _get_db_column_name(self):
+        """Get the appropriate DB column name based on the OS"""
+        return self._detect_os_for_db_column()
 
     def __init__(self, ctrl_be, instance_info, main_view):
         WbAdminTabBase.__init__(self, ctrl_be, instance_info, main_view)
@@ -313,7 +333,7 @@ class WbAdminConnections(WbAdminTabBase):
             self.columns = [("PROCESSLIST_ID", mforms.LongIntegerColumnType, "Id", 50),
                             ("PROCESSLIST_USER", mforms.StringColumnType, "User", 80),
                             ("PROCESSLIST_HOST", mforms.StringColumnType, "Host", 120),
-                            ("PROCESSLIST_DB", mforms.StringColumnType, "DB", 100),
+                            ("PROCESSLIST_DB", mforms.StringColumnType, self._get_db_column_name(), 100),
                             ("PROCESSLIST_COMMAND", mforms.StringColumnType, "Command", 80),
                             ("PROCESSLIST_TIME", mforms.LongIntegerColumnType, "Time", 60),
                             ("PROCESSLIST_STATE", mforms.StringColumnType, "State", 80),
@@ -344,7 +364,7 @@ class WbAdminConnections(WbAdminTabBase):
             self.columns = [("Id", mforms.LongIntegerColumnType, "Id", 50),
                             ("User", mforms.StringColumnType, "User", 80),
                             ("Host", mforms.StringColumnType, "Host", 120),
-                            ("DB", mforms.StringColumnType, "DB", 100),
+                            ("DB", mforms.StringColumnType, self._get_db_column_name(), 100),
                             ("Command", mforms.StringColumnType, "Command", 80),
                             ("Time", mforms.LongIntegerColumnType, "Time", 60),
                             ("State", mforms.StringColumnType, "State", 80),
